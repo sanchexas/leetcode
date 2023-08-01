@@ -1,6 +1,45 @@
+declare global {
+    interface Array<T> {
+        last(): T | -1;
+    }
+}
+
 class Easy{
+    /**
+     * -Sleep
+     * Given a positive integer millis, write an asynchronous function
+     * that sleeps for millis milliseconds. It can resolve any value.
+     * 
+     * TOPICS:
+     * -Promises
+     */
     async sleep(millis: number): Promise<void> {
-        
+        await new Promise((resolve): void => {
+            setTimeout(resolve, millis);
+        });
+    }
+    /**
+     * -Array Prototype Last
+     * Write code that enhances all arrays such that you can call the array.last() method 
+     * on any array and it will return the last element. 
+     * If there are no elements in the array, it should return -1.
+     * You may assume the array is the output of JSON.parse.
+     * 
+     * TOPICS: 
+     * -Prototype inheritance and the `prototype` property
+     * 
+     * SOURCE:
+     * -https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype#changing_the_prototype_of_all_instances_by_mutating_the_prototype_property
+     */
+    arrayPrototypeTask(): void{
+        Array.prototype.last = function(){
+            if(this.length !== 0 || this.length !>= 1000){
+                return this[this.length-1];
+            }   
+            return -1;
+        }
+        let arr = [1, {}, 12];
+        console.log(arr.last()); // 12
     }
 }
 
