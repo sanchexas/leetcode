@@ -16,3 +16,7 @@ console.log(fn(4));
 // ---------MEDIUM----------
 
 // ---------HARD------------
+
+// ---------POLYGON---------
+const pipeFunction = polygon.pipes(x => x + 1, x => x * x, x => 2 * x);
+console.log(pipeFunction(5)); // 72
