@@ -1,6 +1,7 @@
 declare global {
     interface Array<T> {
         last(): T | -1;
+        customMap<T>(cb: (item: T) => any): T[]
     }
     type FuncComposeType = (x: number) => number;
     type Fn_1 = (accum: number, curr: number) => number

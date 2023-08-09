@@ -8,6 +8,7 @@ class Polygon{
             return functions.reduce((resultValue, fc) => fc(resultValue), x);
         }
     }
+    
 }
 
 export default new Polygon;

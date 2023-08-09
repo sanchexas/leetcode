@@ -14,5 +14,29 @@ console.log(easy.filter(arr1, (n) => {
 // ---------MEDIUM----------
 // ---------HARD------------
 // ---------POLYGON---------
+const users = [
+    {
+        name: "test1",
+        age: 20
+    },
+    {
+        name: "test2",
+        age: 10
+    },
+    {
+        name: "test3",
+        age: 15
+    }
+];
 const pipeFunction = polygon.pipes(x => x + 1, x => x * x, x => 2 * x);
 console.log(pipeFunction(5)); // 72
+Array.prototype.customMap = function (cb) {
+    let newArray = [];
+    for (let i = 0; i < this.length; i++) {
+        newArray.push(cb(this[i]));
+    }
+    return newArray;
+};
+users.customMap((user) => {
+    console.log(`Name: ${user.name} | Age: ${user.age}`);
+});

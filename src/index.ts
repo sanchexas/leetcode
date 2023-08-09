@@ -3,6 +3,10 @@ import middle from "./tasks/middle.js";
 import hard from "./tasks/hard.js";
 import polygon from "./polygon.js";
 
+type UserType = {
+    name: string
+    age: number
+}
 // ----------EASY----------
 easy.sleep(1000).then(()=>{
     console.log("sleep task");
@@ -23,5 +27,32 @@ console.log(easy.filter(arr1, (n)=> {
 // ---------HARD------------
 
 // ---------POLYGON---------
+const users: UserType[] = [
+    {
+        name: "test1",
+        age: 20
+    },
+    {
+        name: "test2",
+        age: 10
+    },
+    {
+        name: "test3",
+        age: 15
+    }
+]
+
 const pipeFunction = polygon.pipes(x => x + 1, x => x * x, x => 2 * x);
 console.log(pipeFunction(5)); // 72
+
+Array.prototype.customMap = function(cb: (item: any) => any){
+    let newArray: any[] = [];
+    for(let i = 0; i < this.length; i++){
+        newArray.push(cb(this[i]))
+    }
+    return newArray;
+}
+
+users.customMap((user: UserType)=>{
+    console.log(`Name: ${user.name} | Age: ${user.age}`)
+})
