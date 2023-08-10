@@ -1,4 +1,5 @@
 import easy from "./tasks/easy.js";
+import hard from "./tasks/hard.js";
 import polygon from "./polygon.js";
 // ----------EASY----------
 easy.sleep(1000).then(() => {
@@ -12,9 +13,10 @@ console.log(easy.filter(arr1, (n) => {
     return true;
 }));
 console.log(`Args length: ${easy.argsLength(1, 2, 3, 4, 5)}`);
-console.log(easy.expect(5).toBe(2));
+console.log(easy.expect(5).toBe(5));
 // ---------MEDIUM----------
 // ---------HARD------------
+console.log(`median: ${hard.findMedianSortedArrays([0, 0, 0, 0, 0], [-1, 0, 0, 0, 0, 0, 1])}`);
 // ---------POLYGON---------
 const users = [
     {
