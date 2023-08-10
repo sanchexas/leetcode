@@ -24,6 +24,8 @@ console.log(easy.filter(arr1, (n)=> {
 
 console.log(`Args length: ${easy.argsLength(1,2,3,4,5)}`)
 
+console.log(easy.expect(5).toBe(2))
+
 // ---------MEDIUM----------
 
 // ---------HARD------------
