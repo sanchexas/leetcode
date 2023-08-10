@@ -5,7 +5,6 @@ declare global {
     }
     type FuncComposeType = (x: number) => number;
     type Fn_1 = (accum: number, curr: number) => number
-
 }
 
 class Easy{
@@ -94,6 +93,11 @@ class Easy{
         }
         return filteredArray;
     }
+    // bruh easy...
+    argsLength(...args: any[]): number{
+        return args.length
+    }
+    
 }
 
 export default new Easy;

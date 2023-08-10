@@ -22,11 +22,15 @@ console.log(easy.filter(arr1, (n)=> {
     return true
 }));
 
+console.log(`Args length: ${easy.argsLength(1,2,3,4,5)}`)
+
 // ---------MEDIUM----------
 
 // ---------HARD------------
 
 // ---------POLYGON---------
+
+
 const users: UserType[] = [
     {
         name: "test1",
@@ -45,14 +49,15 @@ const users: UserType[] = [
 const pipeFunction = polygon.pipes(x => x + 1, x => x * x, x => 2 * x);
 console.log(pipeFunction(5)); // 72
 
+// custom map method
 Array.prototype.customMap = function(cb: (item: any) => any){
     let newArray: any[] = [];
     for(let i = 0; i < this.length; i++){
-        newArray.push(cb(this[i]))
+        newArray.push(cb(this[i]));
     }
     return newArray;
 }
-
+// test custom map
 users.customMap((user: UserType)=>{
-    console.log(`Name: ${user.name} | Age: ${user.age}`)
+    console.log(`Name: ${user.name} | Age: ${user.age}`);
 })

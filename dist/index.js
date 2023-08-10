@@ -11,6 +11,7 @@ let arr1 = [10, 20, 30, 40, 50, 60, 70, 80, 90];
 console.log(easy.filter(arr1, (n) => {
     return true;
 }));
+console.log(`Args length: ${easy.argsLength(1, 2, 3, 4, 5)}`);
 // ---------MEDIUM----------
 // ---------HARD------------
 // ---------POLYGON---------
@@ -30,6 +31,7 @@ const users = [
 ];
 const pipeFunction = polygon.pipes(x => x + 1, x => x * x, x => 2 * x);
 console.log(pipeFunction(5)); // 72
+// custom map method
 Array.prototype.customMap = function (cb) {
     let newArray = [];
     for (let i = 0; i < this.length; i++) {
@@ -37,6 +39,7 @@ Array.prototype.customMap = function (cb) {
     }
     return newArray;
 };
+// test custom map
 users.customMap((user) => {
     console.log(`Name: ${user.name} | Age: ${user.age}`);
 });

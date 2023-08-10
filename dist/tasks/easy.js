@@ -95,5 +95,9 @@ class Easy {
         }
         return filteredArray;
     }
+    // bruh easy...
+    argsLength(...args) {
+        return args.length;
+    }
 }
 export default new Easy;
