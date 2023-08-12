@@ -143,5 +143,28 @@ class Easy {
         return high + 1;
     }
     ;
+    /**
+     * -moveZeroes
+     *
+     * Do not return anything, modify nums in-place instead.
+     * Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+     * Note that you must do this in-place without making a copy of the array.
+    */
+    moveZeroes(nums) {
+        let zeroQuantity = 0;
+        for (let i = 0; i < nums.length;) {
+            if (nums[i] === 0) {
+                nums.splice(i, 1);
+                zeroQuantity += 1;
+            }
+            else
+                i++;
+        }
+        for (let i = 0; i < zeroQuantity; i++) {
+            nums.push(0);
+        }
+        return nums;
+    }
+    ;
 }
 export default new Easy;
