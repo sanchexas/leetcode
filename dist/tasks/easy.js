@@ -90,7 +90,6 @@ class Easy {
         for (let i = 0; i < arr.length; i++) {
             if (fn(arr[i], i)) {
                 filteredArray.push(arr[i]);
-                console.log(filteredArray);
             }
         }
         return filteredArray;
@@ -112,5 +111,37 @@ class Easy {
             notToBe: (notToBeVal) => notToBeVal !== val ? true : error("Equal")
         };
     }
+    /**
+     * Search Insert Position
+     *
+     * Given a sorted array of distinct integers and a target value,
+     * return the index if the target is found.
+     * If not, return the index where it would be if it were inserted in order.
+     * You must write an algorithm with O(log n) runtime complexity.
+     *
+     * TOPICS:
+     * -Binary search
+    */
+    searchInsert(nums, target) {
+        let low = 0;
+        let high = nums.length - 1;
+        let middle;
+        let guess;
+        while (low <= high) {
+            middle = Math.floor((low + high) / 2);
+            guess = nums[middle];
+            if (guess === target) {
+                return middle;
+            }
+            else if (target < guess) {
+                high = middle - 1;
+            }
+            else if (target > guess) {
+                low = middle + 1;
+            }
+        }
+        return high + 1;
+    }
+    ;
 }
 export default new Easy;
