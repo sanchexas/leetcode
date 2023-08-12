@@ -28,7 +28,9 @@ console.log(easy.expect(5).toBe(5));
 
 console.log(easy.searchInsert([1,2,3,4,5,6,7,8,9], 10));
 
-console.log(easy.moveZeroes([0,0,1]))
+console.log(easy.moveZeroes([0,0,1]));
+
+console.log(`Split last word: ${easy.lengthOfLastWord("   fly me   to   the moon  ")}`);
 
 // ---------MEDIUM----------
 

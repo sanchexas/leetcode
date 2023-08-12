@@ -166,5 +166,11 @@ class Easy {
         return nums;
     }
     ;
+    //-Length of Last Word
+    lengthOfLastWord(s) {
+        const wds = s.trim().split(' ');
+        return wds[wds.length - 1].length;
+    }
+    ;
 }
 export default new Easy;
