@@ -180,8 +180,12 @@ class Easy{
         console.log(nums);
         return nums.length;
     };
+    // idk this task is kinda nonsense
     ipv4Defanging(address: string): string{
         return address.replace(/\./g, '[.]');
+    }
+    indexOfStr(haystack: string, needle: string): number{
+        return haystack.indexOf(needle);
     }
 }
 

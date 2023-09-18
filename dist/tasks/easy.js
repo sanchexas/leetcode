@@ -183,8 +183,12 @@ class Easy {
         return nums.length;
     }
     ;
+    // idk this task is kinda nonsense
     ipv4Defanging(address) {
         return address.replace(/\./g, '[.]');
+    }
+    indexOfStr(haystack, needle) {
+        return haystack.indexOf(needle);
     }
 }
 export default new Easy;
