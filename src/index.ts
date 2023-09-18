@@ -33,11 +33,21 @@ console.log(easy.moveZeroes([0,0,1]));
 console.log(`Split last word: ${easy.lengthOfLastWord("   fly me   to   the moon  ")}`);
 
 console.log(easy.removeElement([1,2,1,2,3,4], 2));
+
+console.log(easy.ipv4Defanging("255.100.50.0"))
 // ---------MEDIUM----------
 
 // ---------HARD------------
 console.log(`median: ${hard.findMedianSortedArrays([0,0,0,0,0],[-1,0,0,0,0,0,1])}`)
 // ---------POLYGON---------
+let objA = {
+    a: "one",
+    b: 2,
+    c: true
+}
+let objB = objA;
+objB.c = false;
+console.table(objA);
 
 const users: UserType[] = [
     {

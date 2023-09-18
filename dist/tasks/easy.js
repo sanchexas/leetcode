@@ -183,5 +183,8 @@ class Easy {
         return nums.length;
     }
     ;
+    ipv4Defanging(address) {
+        return address.replace(/\./g, '[.]');
+    }
 }
 export default new Easy;

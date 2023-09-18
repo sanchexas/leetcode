@@ -180,6 +180,9 @@ class Easy{
         console.log(nums);
         return nums.length;
     };
+    ipv4Defanging(address: string): string{
+        return address.replace(/\./g, '[.]');
+    }
 }
 
 export default new Easy;
