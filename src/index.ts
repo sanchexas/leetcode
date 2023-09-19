@@ -35,6 +35,14 @@ console.log(`Split last word: ${easy.lengthOfLastWord("   fly me   to   the moon
 console.log(easy.removeElement([1,2,1,2,3,4], 2));
 
 console.log(easy.ipv4Defanging("255.100.50.0"))
+
+console.log(
+    '   ▉ ▉' + '\n'
+    + '   ▉ ▉' + '\n'
+    + '   ▉ ▉ ▉' + '\n'
+    + '   ▉ ▉ ▉ ▉' + '\n' 
+    + '▉ ▉ ▉ ▉ ▉' + '\n' + '1 5 5 3 2')
+
 // ---------MEDIUM----------
 
 // ---------HARD------------

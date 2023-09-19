@@ -19,6 +19,11 @@ console.log(easy.moveZeroes([0, 0, 1]));
 console.log(`Split last word: ${easy.lengthOfLastWord("   fly me   to   the moon  ")}`);
 console.log(easy.removeElement([1, 2, 1, 2, 3, 4], 2));
 console.log(easy.ipv4Defanging("255.100.50.0"));
+console.log('   ▉ ▉' + '\n'
+    + '   ▉ ▉' + '\n'
+    + '   ▉ ▉ ▉' + '\n'
+    + '   ▉ ▉ ▉ ▉' + '\n'
+    + '▉ ▉ ▉ ▉ ▉' + '\n' + '1 5 5 3 2');
 // ---------MEDIUM----------
 // ---------HARD------------
 console.log(`median: ${hard.findMedianSortedArrays([0, 0, 0, 0, 0], [-1, 0, 0, 0, 0, 0, 1])}`);
