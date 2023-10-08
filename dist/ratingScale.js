@@ -18,4 +18,5 @@ function ratingScale(arr, scaleStyle){
     }
     console.log(`${resultY}\n${originArr.toString().replace(/[^\w\s]/g, '  ')}`);
 }
-ratingScale([1,5,3,2,7,3,4,2], '▉')
+ratingScale([1,5,3,2,7,3,4,2], '▉');
+console.log("hello world");

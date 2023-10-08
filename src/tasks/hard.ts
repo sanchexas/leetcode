@@ -24,7 +24,7 @@ class Hard{
             let pivot: number = arr[arr.length - 1];
             let lessThanPivotNums: number[] = [];
             let biggerThanPivotNums: number[] = [];
-    
+            
             for(let i: number = 0; i < arr.length-1; i++){
                 if(arr[i] < pivot){
                     lessThanPivotNums.push(arr[i]);

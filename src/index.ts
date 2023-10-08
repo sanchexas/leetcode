@@ -1,5 +1,4 @@
 import easy from "./tasks/easy.js";
-import middle from "./tasks/middle.js";
 import hard from "./tasks/hard.js";
 import polygon from "./polygon.js";
 
